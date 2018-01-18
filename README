@@ -10,3 +10,26 @@ For bug reports, mailing list, and other information please visit:
   http://harfbuzz.org/
 
 For license information, see the file COPYING.
+
+### ARM-VITA Notes
+
+Currently compiling with
+
+```bash
+export FREETYPE_CFLAGS=-I/usr/local/vitasdk/arm-vita-eabi/include/freetype2
+export FREETYPE_DEPS="freetype2 >= 12.0.6"
+export FREETYPE_LIBS="-L/usr/local/vitasdk/arm-vita-eabi/lib/freetype -lfreetype -lpng"
+
+./configure --host=arm-vita-eabi --disable-shared --enable-static --prefix=/usr/local/vitasdk/arm-vita-eabi/ --with-glib=no
+
+make
+```
+
+Autotools isn't looking at sdk path for libraries for some reason...
+
+```bash
+...
+checking for pkg-config... /usr/local/bin/pkg-config
+configure: WARNING: using cross tools not prefixed with host triplet
+...
+```

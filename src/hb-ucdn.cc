@@ -18,7 +18,7 @@
 
 #include "hb-unicode-private.hh"
 
-#include "mupdf/ucdn.h"
+#include "ucdn.h"
 
 static const hb_script_t ucdn_script_translate[] =
 {
