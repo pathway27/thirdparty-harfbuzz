@@ -28,7 +28,7 @@
 #define HB_META_HH
 
 #include "hb.hh"
-
+#include <climits>
 
 /*
  * C++ template meta-programming & fundamentals used with them.
